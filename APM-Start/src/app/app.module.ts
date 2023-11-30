@@ -14,10 +14,17 @@ import { ProductDetailGuard } from './products/product-detail.guard';
 
 @NgModule({
   declarations: [
-    AppComponent, ProductListComponent, convertToSpacesPipe, StarComponent, ProductDetailComponent, WelcomeComponent
+    AppComponent,
+    ProductListComponent,
+    convertToSpacesPipe,
+    StarComponent,
+    ProductDetailComponent,
+    WelcomeComponent
   ],
   imports: [
-    BrowserModule, FormsModule, HttpClientModule,
+    BrowserModule,
+    FormsModule,
+    HttpClientModule,
     RouterModule.forRoot([
       {path: 'products', component: ProductListComponent},
       {path: 'products/:id', canActivate:[ProductDetailGuard], component: ProductDetailComponent},
